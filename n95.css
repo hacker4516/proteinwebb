@@ -1,0 +1,231 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
+.item1 { grid-area: header; background-color: #FFF4B4;}
+.item2 { grid-area: main; background-color: #FFFCD5;}
+.item3 { grid-area: menu; background-color: #FFFCD5;}
+.item4 { grid-area: footer; background-color: #FFF4B4;}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'main main menu menu menu'
+    'footer footer footer footer footer';
+  grid-template-columns: auto auto;
+  gap: 0px;
+  background-color: #000000;
+}
+
+.container > div {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.logo{
+  height: auto;
+  width: 280px;
+  border-radius: 18%;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+header nav{
+  text-align: center;
+  flex: 1;
+}
+
+header nav ul{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.sök form {
+	display: flex;
+	align-items: center;
+}
+
+.sök input[type="text"] {
+	height: 30px;
+	font-size: 18px;
+	padding: 5px;
+	border: none;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+
+.sök button {
+	height: 35px;
+	font-size: 18px;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 3px;
+	background-color: rgb(77, 77, 77);
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.färglänk {
+  color: #000;
+}
+
+footer {
+  color: #000;
+  padding: 20px;
+}
+
+footer h1 {
+  margin: 0;
+}
+  
+footer nav {
+  text-align: center;
+}
+  
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  
+footer nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+  
+footer nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rektangel {
+  width: 700px;
+  margin-bottom: 20px;
+  background-color: #ffda61;
+  border-radius: 6%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rektangel img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5% 0 0 5%;
+}
+
+.rektangel .produkttext {
+  width: 50%;
+  padding: 20px;
+}
+
+.rektangel h2 {
+  margin-top: 0;
+}
+
+.rektangel p {
+  margin-bottom: 10px;
+}
+
+.rektangel .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.rektangel .addtocart {
+  background-color: #0b81ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.rektangel .addtocart:hover {
+  background-color: #005fc5;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+}
+
+.varukorg {
+  padding: 20px;
+}
+
+.varukorg h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.varukorgprodukter {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.varukorgtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.varukorgtotal span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.varukorgtotal .totalpis {
+  color: #000000;
+  font-size: 20px;
+}
+
+.checkout {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; 
+}
+
+.checkout:hover {
+  background-color: #8f0000;
+}
